@@ -49,8 +49,8 @@ const Navbar = () => {
         <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
           <a href="/">Inicio</a>
           <a href="/pacientes">Pacientes</a>
-          <a href="/consultas">Consultas</a>
-          <a href="/recetas">Recetas</a>
+          <a href="/medicamentos">Medicamentos</a>
+          <a href="/servicios">Servicios</a>
         </div>
 
         {/* Menú de usuario */}
