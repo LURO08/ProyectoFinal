@@ -37,9 +37,13 @@ const MedicamentosList = () => {
   };
 
   const handleDelete = (id) => {
-    api.delete(`/medicamentos/${id}`).then(() => {
+    api.delete(`/medicamentos/delete/${id}`)
+    .then(() => {
       setMedicamentos(medicamentos.filter((med) => med.id !== id));
       setSuccessMessage("Medicamento eliminado con éxito");
+    })
+    .catch((error) => {
+      console.error("Error al eliminar medicamento:", error);
     });
   };
 
@@ -66,13 +70,18 @@ const MedicamentosList = () => {
 
   const handleSave = () => {
     if (editMode) {
-      api.put(`/medicamentos/${currentMedicamento.id}`, currentMedicamento).then((response) => {
+      api.
+      put(`/medicamentos/${currentMedicamento.id}`, currentMedicamento)
+      .then((response) => {
         setMedicamentos(
           medicamentos.map((med) =>
             med.id === currentMedicamento.id ? response.data : med
           )
         );
         setSuccessMessage("Medicamento actualizado con éxito");
+      })
+      .catch((error) => {
+        console.error("Error al guardar cambios:", error);
       });
     } else {
       api.post("/medicamentos/store", currentMedicamento).then((response) => {

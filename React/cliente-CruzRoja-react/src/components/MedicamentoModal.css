@@ -1,0 +1,18 @@
+/* Modal */
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  }
+  
+  .ReactModal__Content {
+    position: relative;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    height: 40vh;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-out;
+    width: 100%;
+  }

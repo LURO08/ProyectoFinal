@@ -55,9 +55,6 @@ const Navbar = () => {
 
         {/* Menú de usuario */}
         <div className="navbar-user">
-          <button className="navbar-user-btn" onClick={handleLogout}>
-            <i className="fa fa-sign-out"></i> Salir
-          </button>
         </div>
       </div>
     </nav>
