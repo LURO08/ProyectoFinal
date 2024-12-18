@@ -1,0 +1,133 @@
+/* Estilo de la barra de navegación */
+.navbar {
+    background-color: #f14141; /* Color principal */
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0; /* Asegura que ocupe todo el ancho */
+    z-index: 1000;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 60px; /* Altura ajustada */
+  }
+  
+  /* Contenedor principal de la barra de navegación */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  /* Estilo del logo o título */
+  .navbar-logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  /* Estilo del menú de navegación */
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+  }
+  
+  /* Estilo del menú de usuario (logout) */
+  .navbar-user {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-user-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-user-btn i {
+    margin-right: 8px;
+  }
+  
+  .navbar-user-btn:hover {
+    color: #f0f0f0;
+  }
+  
+  /* Estilo responsivo: móvil y tablet */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none; /* Esconde el menú en pantallas pequeñas */
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #4CAF50;
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .navbar-container {
+      justify-content: space-between;
+    }
+  
+    .navbar-links.active {
+      display: flex; /* Muestra el menú cuando esté activo */
+    }
+  
+    .navbar-logo h1 {
+      font-size: 1.6rem;
+    }
+  
+    .navbar-user-btn {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Menú hamburguesa (icono) */
+  .hamburger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px;
+    width: 30px;
+  }
+  
+  .hamburger-icon div {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+  }
+  
+  /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .hamburger-icon {
+      display: flex;
+    }
+  }
+  

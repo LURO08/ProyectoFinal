@@ -1,0 +1,285 @@
+/* General */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+}
+
+/* Container */
+.dashboard {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 900px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Header */
+.header h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Notificación */
+.notification {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.notification .btn-close {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #155724;
+  cursor: pointer;
+}
+
+.notification .btn-close:hover {
+  color: #003d00;
+}
+
+/* Formulario y Botones */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-size: 14px;
+  margin: 10px 0 5px;
+}
+
+form input,
+form select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+form .cancel-button {
+  background-color: #dc3545;
+}
+
+form .cancel-button:hover {
+  background-color: #c82333;
+}
+
+/* Modal */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.ReactModal__Content {
+  position: relative;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-out;
+  width: 100%;
+}
+
+.ReactModal__Content h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.ReactModal__Content input {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+  background-color: #fff;
+}
+
+.ReactModal__Content select {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+  background-color: #fff;
+}
+
+.ReactModal__Content button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.ReactModal__Content button:hover {
+  background-color: #0056b3;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Botón de cerrar */
+.ReactModal__Content .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.ReactModal__Content .close-btn:hover {
+  color: #0056b3;
+}
+
+/* Estilos para la tabla */
+.pacientes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: #000;
+}
+
+.pacientes-table th,
+.pacientes-table td {
+  padding: 12px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.pacientes-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.pacientes-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.pacientes-table td button {
+  margin: 0 5px;
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pacientes-table td .edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.pacientes-table td .edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.pacientes-table td .delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.pacientes-table td .delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Botón para agregar paciente */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+
+  .pacientes-table th,
+  .pacientes-table td {
+    padding: 8px 10px;
+  }
+
+  .pacientes-table {
+    font-size: 12px;
+  }
+
+  .ReactModal__Content {
+    padding: 20px;
+  }
+
+  .pacienteContent {
+    max-width: 100%;
+  }
+}
