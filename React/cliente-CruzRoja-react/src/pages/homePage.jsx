@@ -1,5 +1,5 @@
 import React from "react";
-import PacientesList from "../components/PacientesList";
+import Home from "../components/home";
 import NavBar from "../components/Navbar";
 
 const PacientesPage = () => {
@@ -9,7 +9,7 @@ const PacientesPage = () => {
       <NavBar />
       <div className="page-content">
         <br /><br />
-        <PacientesList />
+        <Home />
       </div>
     </div>
   );

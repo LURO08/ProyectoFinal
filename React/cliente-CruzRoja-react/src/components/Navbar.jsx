@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo o título de la app */}
         <div className="navbar-logo">
-          <h1>Consultorio Médico</h1>
+          <h1>ADMINISTRADOR</h1>
         </div>
 
         {/* Menú hamburguesa para móvil */}

@@ -75,7 +75,7 @@ const PacientesList = () => {
         });
     } else {
       api
-        .post("/pacientes", currentPaciente)
+        .post("/pacientes/store", currentPaciente)
         .then((response) => {
           setPacientes([...pacientes, response.data]);
           setSuccessMessage("Paciente agregado con éxito");
