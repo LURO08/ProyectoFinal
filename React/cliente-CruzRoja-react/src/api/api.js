@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getAuthToken } from '../utils/auth'; // Importa la función para obtener el token
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api/', // La URL del backend Laravel
+  baseURL: 'http://192.168.209.113:8000/api/', // La URL del backend Laravel
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',

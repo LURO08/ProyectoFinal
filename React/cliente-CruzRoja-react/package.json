@@ -2,7 +2,7 @@
   "name": "cliente-cruzroja-react",
   "private": true,
   "version": "0.0.0",
-  "proxy": "http://127.0.0.1:8000",
+  "proxy": "http://192.168.209.113:8000",
   "type": "module",
   "scripts": {
     "dev": "vite",
